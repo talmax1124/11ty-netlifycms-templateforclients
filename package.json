@@ -35,7 +35,6 @@
     "daisyui": "^1.13.0",
     "dotenv": "^10.0.0",
     "eleventy-plugin-blog-tools": "^0.3.1",
-    "eleventy-plugin-lazyimages": "^2.1.0",
     "eleventy-plugin-pwa": "^1.0.8",
     "eleventy-plugin-reading-time": "0.0.1",
     "eleventy-plugin-seo": "^0.5.2",
@@ -45,7 +44,7 @@
     "netlify": "^8.0.0",
     "netlify-cms-widget-inline-select": "^1.2.0",
     "postcss-cli": "^8.3.1",
-    "sharp": "^0.28.3",
+    "sharp": "^0.29.3",
     "watch": "^0.13.0"
   }
 }

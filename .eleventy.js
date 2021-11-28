@@ -1,10 +1,10 @@
 const { DateTime } = require("luxon");
 const readingTime = require("eleventy-plugin-reading-time");
-const lazyImages = require("eleventy-plugin-lazyimages");
 const pluginSEO = require("eleventy-plugin-seo");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./build/styles.css");
+  eleventyConfig.addPassthroughCopy("./build/style.css");
+    eleventyConfig.addPassthroughCopy("./build/tailwind.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/css/styles.css");
   eleventyConfig.addPassthroughCopy("./src/style.css");
@@ -29,10 +29,7 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  eleventyConfig.addPlugin(lazyImages, {
-    cacheFile: "",
-  });
-
+  
   return {
     templateFormats: ["md", "njk", "html"],
     htmlTemplateEngine: "njk",
