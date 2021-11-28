@@ -84,10 +84,11 @@
   </head>
 
   <body>
-    {% include 'header.njk' %}
+    {% include './components/header.njk' %}
+    <div class="headerseperator"></div>
     <main>
       {{ content | safe }}
     </main>
-    {% include 'footer.njk' %}
+    {% include './components/footer.njk' %}
   </body>
 </html>
