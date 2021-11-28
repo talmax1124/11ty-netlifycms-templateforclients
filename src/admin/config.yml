@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "public/assets/blog"
+public_folder: "/assets/blog"
+publish_mode: editorial_workflow
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "src/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false, default: "Dr. Muhammad Khan" }
+      - {
+          name: "authors",
+          label: "Authors",
+          widget: "inline-select",
+          multiple: true,
+          options:
+            [
+              "Abdurrahman B",
+              "Carnot E",
+              "Tiziano Morganti",
+              "Elijah T",
+              "Jackson M",
+              "Jonathan L",
+              "Edwin R",
+              "Carlos D",
+              "Breana S",
+            ],
+          required: false,
+        }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - {
+          label: "Image caption",
+          name: "imageAlt",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body/Content", name: "body", widget: "markdown" }
+      - {
+          label: "layout",
+          name: "layout",
+          widget: "text",
+          default: "article.njk",
+        }
+
+  - name: "page"
+    label: "Page"
+    folder: "src/pages"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "layout",
+          name: "layout",
+          widget: "text",
+          default: "pages.njk",
+        }
+
+  - name: "faq"
+    label: "Frequently Asked Questions"
+    folder: "src/frequentlyaskedquestions"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Question", name: "title", widget: "string" }
+      - { label: "Response", name: "response", widget: "string" }
