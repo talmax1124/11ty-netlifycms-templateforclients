@@ -5,13 +5,13 @@ const pluginSEO = require("eleventy-plugin-seo");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./build/style.css");
   eleventyConfig.addPassthroughCopy("./build/tailwind.css");
-  eleventyConfig.addPassthroughCopy("_site/style.css");
-  eleventyConfig.addPassthroughCopy("./build/tailwind.config.js");
+  eleventyConfig.addPassthroughCopy("./site/style.css");
+  eleventyConfig.addPassthroughCopy("/site/style.css");
 
   eleventyConfig.addWatchTarget("./build/tailwind.css");
-  eleventyConfig.addWatchTarget("./build/tailwind.config.js");
   eleventyConfig.addWatchTarget("./build/style.css");
-  eleventyConfig.addWatchTarget("_site/style.css");
+  eleventyConfig.addWatchTarget("/site/style.css");
+  eleventyConfig.addWatchTarget("./site/style.css");
 
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/css/styles.css");

@@ -1,8 +1,8 @@
 {
-    "name": "Enter Name",
+    "name": "Site",
     "url": "Enter URL",
-    "authorName": "Enter Name",
+    "authorName": "Author Name",
     "authorUrl": "Enter URL",
-    "description": "ENTER Description",
-    "favicon": "Enter Favicon Path"
+    "description": "Description",
+    "favicon": "URL"
   }
