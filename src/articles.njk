@@ -1,0 +1,30 @@
+---
+title: Articles
+layout: "base.njk"
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+  reverse: true
+---
+
+<h1 class="text-5xl gray-800 m-10">Articles</h1>
+
+<div class="flex justify-between flex-wrap">
+  {% for post in posts %} {% include "article-snippet.njk" %} {% endfor %}
+</div>
+
+<div class="m-5">
+  {% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}"
+    ><button class="p-2 mr-1 bg-black text-white">
+      <i class="fas fa-long-arrow-alt-left"></i> Previous Page
+    </button></a
+  >
+  {% endif %} {% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}"
+    ><button class="p-2 ml-1 bg-black text-white">
+      Next Page <i class="fas fa-long-arrow-alt-right"></i></button
+  ></a>
+  {% endif %}
+</div>

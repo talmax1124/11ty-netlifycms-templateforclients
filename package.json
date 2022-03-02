@@ -1,0 +1,52 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "Website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:eleventy": "npx eleventy --serve",
+    "dev:tailwind": "npx tailwindcss -i build/tailwind.css -c build/tailwind.config.js -o site/style.css --watch --no-map",
+    "build:eleventy": "eleventy npm run",
+    "build:tailwind": "npx tailwindcss -i build/tailwind.css -c build/tailwind.config.js -o site/style.css --minify --no-map",
+    "build": "npm-run-all build:*",
+    "start": "npm-run-all --parallel dev:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talmax1124/starter"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talmax1124/starter/issues"
+  },
+  "homepage": "https://github.com/",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "autoprefixer": "^10.4.2",
+    "netlify-plugin-image-optim": "^0.4.0",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.10.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "dotenv": "^10.0.0",
+    "eleventy-plugin-blog-tools": "^0.3.1",
+    "eleventy-plugin-pwa": "^1.0.8",
+    "eleventy-plugin-reading-time": "0.0.1",
+    "eleventy-plugin-seo": "^0.5.2",
+    "eleventy-plugin-youtube-embed": "^1.6.4",
+    "html-minifier": "^4.0.0",
+    "netlify": "^8.0.0",
+    "netlify-cms-widget-inline-select": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1",
+    "sharp": "^0.29.3",
+    "slick-carousel": "^1.8.1",
+    "watch": "^0.13.0"
+  }
+}

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: transparent;
+  outline: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.headerseperator {
+  height: 4em;
+}
+
+/* Hero Glassmorphism Button */
+.glassmorphism_hero_button {
+  background-color: rgba(255, 255, 255, 0.123);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  -webkit-animation: 0.25s ease;
+          animation: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.glassmorphism_hero_button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.hero-top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.616)), to(rgba(0, 0, 0, 0.644))), url("https://gwc.cs.iastate.edu/files/styles/banner/public/2021-06/banneroption2.jpg?itok=YFGSbOhY");
+  background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.644)), url("https://gwc.cs.iastate.edu/files/styles/banner/public/2021-06/banneroption2.jpg?itok=YFGSbOhY");
+}
+
+.cta-bottom {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.616)), to(rgba(0, 0, 0, 0.644))), url("https://tbcdn.talentbrew.com/company/21764/Full_v1_0/img/JOB_POSTINGS-banner.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.644)), url("https://tbcdn.talentbrew.com/company/21764/Full_v1_0/img/JOB_POSTINGS-banner.jpg") no-repeat;
+}
+
+.btntransanim {
+  -webkit-animation: 0.25s ease;
+          animation: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.section-styling {
+  padding: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  display: block;
+}
+
+.about-section-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.about-section-flex .about-left {
+  width: 40%;
+  display: block;
+  margin: auto 0;
+}
+
+.about-section-flex .about-right {
+  width: 60%;
+}
+
+.purpose-title {
+  text-align: center;
+}
+
+.purposemissionsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purposemissionsection .purpose {
+  width: 49.9%;
+  display: block;
+  margin: auto 0;
+}
+
+.purposemissionsection .mission {
+  width: 49.9%;
+  display: block;
+  margin: auto 0;
+}
+
+.hero-title-text {
+  font-size: 3.75rem;
+}
+
+.careers {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .hero-title-text {
+    font-size: 3.25em;
+  }
+  .purposemissionsection {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .purposemissionsection .purpose {
+    width: 100%;
+  }
+  .purposemissionsection .mission {
+    width: 100%;
+  }
+  .about-section-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .about-section-flex .about-left {
+    width: 100%;
+  }
+  .about-section-flex .about-right {
+    width: 100%;
+  }
+  .hero-top {
+    background-position: center center;
+  }
+  .cta-bottom {
+    background-position: center center;
+  }
+  .section-styling {
+    padding: 1.2em;
+    margin-top: .8em;
+    margin-bottom: .8em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

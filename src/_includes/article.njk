@@ -1,0 +1,26 @@
+---
+layout: "base.njk"
+---
+
+  <div class="grid items-center grid-cols-1 md:grid-cols-2">
+    <div class="order-2 h-64 md:order-1 md:h-full">
+      <img src="{{ image }}" class="object-cover w-full h-full bg-center" alt="{{imageAlt}}" />
+    </div>
+    <div class="order-1 w-full px-4 py-12 mx-auto text-left md:w-3/4 md:py-48 md:order-2 md:px-0">
+      <p class="mb-3 text-gray-500">
+        <time itemprop="datePublished dateModified" datetime="2010-08-07 11:11:03-0400" pubdate>{{ date | postDate }}  |  Estimated Read Time: {{ content | readingTime }}</time>
+      </p>
+      <!-- <span class="text-black">Read time:</span> About {{ content | readingTime }}</span> -->
+
+      <h1 class="mb-5 text-5xl font-bold text-gray-900 md:leading-tight " itemprop="headline" title="{{title}}">
+        {{ title }}
+      </h1>
+    </div>
+  </div>
+
+<div class="prose p-2 max-w-5xl m-auto contimg mt-5">
+  {{ content | safe }}
+</div>
+
+
+

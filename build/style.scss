@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: transparent;
+  outline: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.headerseperator {
+  height: 4em;
+}
+
+/* Hero Glassmorphism Button */
+.glassmorphism_hero_button {
+  background-color: rgba(255, 255, 255, 0.123);
+  backdrop-filter: blur(25px);
+  animation: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.glassmorphism_hero_button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(50px);
+}
+
+.hero-top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.644)),
+    url("https://gwc.cs.iastate.edu/files/styles/banner/public/2021-06/banneroption2.jpg?itok=YFGSbOhY");
+}
+
+.cta-bottom {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.644)),
+    url("https://tbcdn.talentbrew.com/company/21764/Full_v1_0/img/JOB_POSTINGS-banner.jpg") no-repeat;
+}
+
+.btntransanim {
+  animation: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.section-styling {
+  padding: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  display: block;
+}
+
+.about-section-flex {
+  display: flex;
+  width: 100%;
+  .about-left {
+    width: 40%;
+    display: block;
+    margin: auto 0;
+  }
+
+  .about-right {
+    width: 60%;
+  }
+}
+
+.purpose-title {
+  text-align: center;
+}
+
+.purposemissionsection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .purpose {
+    width: 49.9%;
+    display: block;
+    margin: auto 0;
+  }
+
+  .mission {
+    width: 49.9%;
+    display: block;
+    margin: auto 0;
+  }
+}
+
+.hero-title-text {
+  font-size: 3.75rem;
+}
+
+.careers {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .hero-title-text {
+    font-size: 3.25em;
+  }
+
+  .purposemissionsection {
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    .purpose {
+      width: 100%;
+    }
+    .mission {
+      width: 100%;
+    }
+  }
+
+  .about-section-flex {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    .about-left {
+      width: 100%;
+    }
+    .about-right {
+      width: 100%;
+    }
+  }
+
+  .hero-top {
+    background-position: center center;
+  }
+
+  .cta-bottom {
+    background-position: center center;
+  }
+
+  .section-styling {
+    padding: 1.2em;
+    margin-top: .8em;
+    margin-bottom: .8em;
+  }
+}

@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "public/assets/blog"
+public_folder: "/assets/blog"
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "src/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", required: false, default: "User" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - {
+          label: "Image caption",
+          name: "imageAlt",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body/Content", name: "body", widget: "markdown" }
+      - {
+          label: "layout",
+          name: "layout",
+          widget: "text",
+          default: "article.njk",
+        }
+
+  - name: "page"
+    label: "Page"
+    folder: "src/pages"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "layout",
+          name: "layout",
+          widget: "text",
+          default: "pages.njk",
+        }
+
+  - name: "faq"
+    label: "Frequently Asked Questions"
+    folder: "src/frequentlyaskedquestions"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Question", name: "title", widget: "string" }
+      - { label: "Response", name: "response", widget: "string" }
+
+  - name: "about"
+    label: "About"
+    folder: "src/aboutsection"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Response", name: "response", widget: "string", hint: "About Wording" }
+
+  - name: "careerssection"
+    label: "Careers"
+    folder: "src/careerssection"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Image", name: "image", widget: "image", hint: "Make sure image is 370 x 300" }
+      - { label: "Category", name: "category", widget: "string", hint: "Make sure this is all lowercase and matches exactly to the naming in Careers Category Page" }
+      - { label: "Category Title", name: "categorytitle", widget: "string", hint: "Doesn't matter if uppercase or lowercase. This is what the user views" }
+      - { label: "Job Title", name: "jobtitle", widget: "string", hint: "This is the actual job title. Software Developer, etc." }
+      - { label: "Link", name: "link", widget: "string", required: false, hint: "Link to job listing" }
+
+  - name: "careerssectioncat"
+    label: "Careers Category"
+    folder: "src/careerssectioncat"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { label: "Career", name: "career", widget: "string", hint: "please make sure it's lowercase" }
+      - { label: "Career Title", name: "careertitle", widget: "string", hint: "This is what the user views in the buttons"}
